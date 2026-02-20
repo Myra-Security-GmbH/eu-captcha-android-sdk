@@ -66,7 +66,7 @@ afterEvaluate {
         pom {
             name.set("EU Captcha Android SDK")
             description.set("A SDK for integrating EU Captcha into your Android apps.")
-            url.set("https://github.com/eu-captcha/eu-captcha-android")
+            url.set("https://github.com/Myra-Security-GmbH/eu-captcha-android-sdk")
             inceptionYear.set("2024")
 
             licenses {
@@ -85,9 +85,9 @@ afterEvaluate {
             }
 
             scm {
-                connection.set("scm:git:git://github.com/eu-captcha/eu-captcha-android.git")
-                developerConnection.set("scm:git:ssh://github.com/eu-captcha/eu-captcha-android.git")
-                url.set("https://github.com/eu-captcha/eu-captcha-android")
+                connection.set("scm:git:git://github.com/Myra-Security-GmbH/eu-captcha-android-sdk.git")
+                developerConnection.set("scm:git:ssh://github.com/Myra-Security-GmbH/eu-captcha-android-sdk.git")
+                url.set("https://github.com/Myra-Security-GmbH/eu-captcha-android-sdk")
             }
         }
     }
