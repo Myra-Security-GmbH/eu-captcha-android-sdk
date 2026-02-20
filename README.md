@@ -2,6 +2,9 @@
 
 The EU Captcha Android SDK allows you to easily integrate [EU Captcha](https://eu-captcha.eu) into your Android applications.
 
+- **Dashboard:** [app.eu-captcha.eu](https://app.eu-captcha.eu)
+- **Documentation:** [docs.eu-captcha.eu](https://docs.eu-captcha.eu)
+
 ## Installation
 
 Add the following to your `build.gradle` file:
