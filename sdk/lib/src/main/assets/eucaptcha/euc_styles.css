@@ -1,0 +1,151 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  margin: 2px;
+}
+
+.myra-check {
+  display: flex;
+  justify-content: space-between;
+
+  height: 100%;
+  padding: 0 20px;
+
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.myra-check--dark {
+  color: #ffffff;
+  background-color: #201f1d;
+}
+
+.myra-check__loader {
+  width: 60%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.myra-check__provider {
+  width: 40%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.myra-check__provider-img {
+  background-image: url("https://cdn.eu-captcha.eu/assets/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: block;
+  height: 35%;
+  width: 100%;
+}
+
+.myra-check--dark .myra-check__provider-img {
+  background-image: url("https://cdn.eu-captcha.eu/assets/logo_white.svg");
+}
+
+.myra-check__provider-links-container {
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  margin-top: 2px;
+  transform: translateX(39px);
+  color: #002b4a;
+}
+
+.myra-check--dark .myra-check__provider-links-container {
+  color: #888887;
+}
+
+.myra-check__provider-link {
+  color: #002b4a;
+  text-decoration: none;
+}
+
+.myra-check--dark .myra-check__provider-link {
+  color: #888887;
+}
+
+.myra-check__provider-link:hover {
+  text-decoration: underline;
+}
+
+.myra-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(42, 217, 255, 0.3);
+  border-top-color: #2ad9ff;
+  border-radius: 50%;
+  animation: myra-spin 1s linear infinite;
+}
+
+@keyframes myra-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.myra-checkmark {
+  width: 24px;
+  height: 24px;
+  animation: myra-scaleIn 0.3s ease-out;
+}
+
+.myra-checkmark__circle {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: myra-draw 0.6s ease-out 0.1s forwards;
+}
+
+.myra-checkmark__tick {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: myra-draw 0.4s ease-out 0.5s forwards;
+}
+
+@keyframes myra-scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes myra-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-height: 72px) {
+  .myra-check__provider {
+    display: none;
+  }
+
+  .myra-check__loader {
+    width: 100%;
+  }
+}

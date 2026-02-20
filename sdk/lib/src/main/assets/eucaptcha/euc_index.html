@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EU Captcha Anti-Robot Check Widget</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="euc_styles.css" />
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="myra-check" id="eu-captcha-widget">
+      <div class="myra-check__loader">
+        <div id="loader" class="myra-check__loader-icon"></div>
+        <div id="myra-check__status">Loading</div>
+      </div>
+      <div class="myra-check__provider">
+        <a
+          href="https://eu-captcha.eu/"
+          target="_blank"
+          class="myra-check__provider-img"
+        >
+          <span></span>
+        </a>
+      </div>
+    </form>
+    <!-- Bridge must load before check logic so postMessage is overridden -->
+    <script src="euc_bridge.js"></script>
+    <!-- EU Captcha proof-of-work and verification logic -->
+    <script src="euc_check.all.js"></script>
+  </body>
+</html>

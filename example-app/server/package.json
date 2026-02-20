@@ -1,0 +1,14 @@
+{
+  "name": "eu-captcha-example-server",
+  "version": "1.0.0",
+  "description": "Example server for the EU Captcha Android SDK example app",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
